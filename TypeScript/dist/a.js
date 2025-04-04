@@ -98,14 +98,31 @@
 // }
 // doSomething(Direction.Down);
 // console.log(Direction.Down);
-var Direction;
-(function (Direction) {
-    Direction["Up"] = "Up";
-    Direction["Down"] = "Down";
-    Direction["Left"] = "Left";
-    Direction["Right"] = "Right";
-})(Direction || (Direction = {}));
-function doSomething(keyPressed) {
+// enum Direction{
+//   Up="Up",
+//   Down="Down",
+//   Left="Left",
+//   Right="Right"
+// }
+// function doSomething(keyPressed:Direction){
+// }
+// doSomething(Direction.Down);
+// console.log(Direction.Down);
+// Generic:Ts
+// function getFirstElement(arr:(string | number)[]){
+//   return arr[0];
+// }
+// const el = getFirstElement([1,2,3]);
+// console.log(el);
+// function identity<T>(arg:T):T{
+//   return arg;
+// }
+// let output1 = identity<string>("myString");
+// let output2 = identity<number>(100);
+// console.log(output1);
+// console.log(output2);
+function getFirstElement(arr) {
+    return arr[0];
 }
-doSomething(Direction.Down);
-console.log(Direction.Down);
+var el = getFirstElement(["sravan", "surya"]);
+console.log(el.toUpperCase());
