@@ -43,28 +43,69 @@
 // })
 // Array in TS:
 // Given an array of positive integers as input, return the maximum value in the array
-function maxValue(arr) {
-    var max = 0;
-    for (var i = 0; i < arr.length; i++) {
-        if (arr[i] > max) {
-            max = arr[i];
-        }
-    }
-    return max;
+// function maxValue(arr: number[]) {
+//   let max = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+// console.log(maxValue([1, 2, 3]));
+// // Given a list of users, filter out the users that are legal (greater than 18 years of age)
+// interface User {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+// }
+// function filteredUsers(users: User[]) {
+//   return users.filter((x) => x.age >= 18);
+// }
+// console.log(
+//   filteredUsers([
+//     {
+//       firstName: "harkirat",
+//       lastName: "Singh",
+//       age: 21,
+//     },
+//     {
+//       firstName: "Raman",
+//       lastName: "Singh",
+//       age: 16,
+//     },
+//   ])
+// );
+// Enum in TS
+// Let’s say you have a game where you have to perform an action based on weather the user has pressed the up arrow key, down arrow key, left arrow key or right arrow key.
+// enum Direction{
+//   Up,
+//   Down,
+//   Left,
+//   Right
+// }
+// function doSomething(keyPressed:Direction){
+// }
+// doSomething(Direction.Up);
+// console.log(Direction.Up);
+// enum Direction{
+//   Up=1,
+//   Down,
+//   Left,
+//   Right
+// }
+// function doSomething(keyPressed:Direction){
+// }
+// doSomething(Direction.Down);
+// console.log(Direction.Down);
+var Direction;
+(function (Direction) {
+    Direction["Up"] = "Up";
+    Direction["Down"] = "Down";
+    Direction["Left"] = "Left";
+    Direction["Right"] = "Right";
+})(Direction || (Direction = {}));
+function doSomething(keyPressed) {
 }
-console.log(maxValue([1, 2, 3]));
-function filteredUsers(users) {
-    return users.filter(function (x) { return x.age >= 18; });
-}
-console.log(filteredUsers([
-    {
-        firstName: "harkirat",
-        lastName: "Singh",
-        age: 21,
-    },
-    {
-        firstName: "Raman",
-        lastName: "Singh",
-        age: 16,
-    },
-]));
+doSomething(Direction.Down);
+console.log(Direction.Down);
